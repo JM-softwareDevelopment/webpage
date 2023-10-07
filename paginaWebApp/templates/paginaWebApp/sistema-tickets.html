@@ -1,0 +1,87 @@
+{% load static %}
+<div class="ajax-container">
+	<div class="row align-items-center py-4">
+
+		<div class="col">
+			<a href="#" data-ajax-portfolio-prev class="text-decoration-none d-block float-start">
+				<div class="d-flex align-items-center line-height-1">
+					<i class="fas fa-arrow-left text-dark text-4 me-3"></i>
+					<div class="d-none d-sm-block line-height-1">
+						<span class="text-dark opacity-4 text-1">Proyecto Previo</span>
+					</div>
+				</div>
+			</a>
+		</div>
+		<div class="col">
+			<div class="row">
+				<div class="col-md-12 align-self-center p-static order-2 text-center">
+					<div class="overflow-hidden pb-2">
+						<h2 class="text-dark font-weight-bold text-7 mb-0">MEDICIÓN DE TIEMPOS DE RESPUESTA (SLA's)</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col">
+			<a href="#" data-ajax-portfolio-next class="text-decoration-none d-block float-end">
+				<div class="d-flex align-items-center text-end line-height-1">
+					<div class="d-none d-sm-block line-height-1">
+						<span class="text-dark opacity-4 text-1">Proyecto siguiente</span>
+					</div>
+					<i class="fas fa-arrow-right text-dark text-4 ms-3"></i>
+				</div>
+			</a>
+		</div>
+
+	</div>
+
+	<div class="row pb-4 mb-2">
+		<div class="col-sm-6">
+
+			<div class="owl-carousel owl-theme nav-inside nav-inside-edge nav-squared nav-with-transparency nav-dark mt-3" data-plugin-options="{'items': 1, 'margin': 10, 'loop': false, 'nav': true, 'dots': false}">
+				<div>
+					<div class="img-thumbnail border-0 border-radius-0 p-0 d-block">
+						<img src="{% static 'paginaWebApp/img/projects/tickets/power.png' %}" class="img-fluid border-radius-0" alt="">
+					</div>
+				</div>
+				<div>
+					<div class="img-thumbnail border-0 border-radius-0 p-0 d-block">
+						<img src="{% static 'paginaWebApp/img/projects/tickets/ticket_login.png' %}" class="img-fluid border-radius-0" alt="">
+					</div>
+				</div>
+				<div>
+					<div class="img-thumbnail border-0 border-radius-0 p-0 d-block">
+						<img src="{% static 'paginaWebApp/img/projects/tickets/ticket_main.png' %}" class="img-fluid border-radius-0" alt="">
+					</div>
+				</div>
+			</div>
+
+			<hr class="solid my-5">
+
+			<strong class="text-uppercase text-1 me-3 text-dark float-start position-relative top-2">Compartir</strong>
+			<ul class="social-icons">
+				<li class="social-icons-facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+				<li class="social-icons-twitter"><a href="http://www.twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+				<li class="social-icons-linkedin"><a href="http://www.linkedin.com/" target="_blank" title="Linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+			</ul>
+
+		</div>
+		<div class="col-sm-6">
+			<h2 class="text-color-dark font-weight-normal text-4 mb-0">DESCRIPCIÓN DE <strong class="font-weight-extra-bold">PROYECTO</strong></h2>
+			<h4>1. Fase de pregunta</h4>
+			<p>Este proyecto se implementó en una empresa de servicios de soporte. La empresa contaba con grandes problemas al no tener control de los servicios solicitados, tiempo de resolución y otra información importante.</p>
+			<h4>2. Prepárese para la fase de exploración de datos</h4>
+			<p>PPara resolver el problema, primero tuvimos que crear e implementar una página web de mesa de servicio. En esta etapa se definió el proceso a seguir y diseñamos la experiencia de usuario de la página web. Con la ayuda de JM se logró implementar el portal.</p>
+			<h4>3. Fase del proceso</h4>
+			<p>Se extrajeron los datos de la base de datos MySQL de la mesa de servicio. Se manipularon los datos para determinar si un ticket se retrasó considerando el Acuerdo de Nivel de Servicio (SLA) de la empresa. </p>
+			<h4>4. Fase de análisis y compartir</h4>
+			<p>Se creó un tablero operativo que muestra 3 puntos básicos: cuántas tareas están pendientes por realizar, quiénes son los responsables y qué tickets están fuera del SLA.</p>
+			<h4>5. Fase de acción</h4>
+			<p>Ahora se tienen datos suficientes para coordinar actividades y evitar un mal servicio, contratar gente cuando sea necesario, comprobar qué servicios son cruciales, formar a los técnicos en áreas relevantes, conocer mejor a los clientes, etc. Arriba puedes ver uno de los informes generados en este proyecto. Los datos fueron modificados por motivos de privacidad.</p>
+			<h2 class="text-color-dark font-weight-normal text-4 mb-0 mt-4">Detalles del <strong class="font-weight-extra-bold">Proyecto</strong></h2>
+			<ul class="list list-icons list-primary list-borders text-2">
+				<li><i class="fas fa-caret-right left-10"></i> <strong class="text-color-primary">Fecha:</strong> 2021</li>
+				<li><i class="fas fa-caret-right left-10"></i> <strong class="text-color-primary">Skills:</strong> <a href="#" class="badge badge-dark badge-sm rounded-pill px-2 py-1 ms-1">Desarrolo Web</a><a href="#" class="badge badge-dark badge-sm rounded-pill px-2 py-1 ms-1">Base de datos</a><a href="#" class="badge badge-dark badge-sm rounded-pill px-2 py-1 ms-1">Power Bi</a></li>
+			</ul>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,85 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+<title>JM - Home</title>
+<meta name="keywords" content="WebSite Template" />
+<meta name="description" content="Porto - Multipurpose Website Template">
+<meta name="author" content="okler.net">
+
+{% endblock %}
+
+{% block content %}
+<div role="main" class="main">
+
+	<section class="page-header page-header-modern page-header page-header-modern bg-color-primary page-header-md m-0">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 align-self-center p-static order-2 text-center">
+					<h1 class="text-light text-10"><strong>Resultados</strong></h1>
+					<span class="sub-title text-light">{{count}} resultado(s) de tu búsqueda: <strong>{{searchedText}}</strong></span>
+				</div>
+				
+			</div>
+		</div>
+	</section>
+	<hr class="m-0">
+
+	<div class="container py-5 mt-3">
+
+		<div class="row">
+			<div class="col">
+				<h2 class="font-weight-normal text-7 mb-0">Resultados de tu <strong class="font-weight-extra-bold">búsqueda</strong></h2>
+				<p class="lead mb-0">{{count}} resultado(s) en tu búsqueda.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col pt-2 mt-1">
+				<hr class="my-4">
+			</div>
+		</div>
+		{% if  searchedText %}
+		<div class="row">
+			<div class="col">
+				
+				<ul class="simple-post-list m-0">
+					{% for i in results %}
+
+					<li>
+						<div class="post-info">
+							<a href="blog-post.html">{{i.title}}</a>
+							<div class="post-meta">
+								 <span class="text-dark text-uppercase font-weight-semibold">{{i.subtitle}}</span>
+							</div>
+						</div>
+					</li>
+					{% endfor %}
+				</ul>
+
+
+			</div>
+		</div>
+	</div>
+	{% endif %}
+
+	<section class="section section-default border-0 m-0">
+		<div class="container py-4">
+
+			<div class="row pb-4">
+				<div class="col">
+					<form action="{% url 'searched' %}" method="POST">
+						{% csrf_token %} 
+						<div class="input-group input-group-lg">
+							<input class="form-control h-auto" placeholder="Buscar..." name="searchInput" type="text">
+							<button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
+						</div>
+					</form>								
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+</div>
+{% endblock %}
+

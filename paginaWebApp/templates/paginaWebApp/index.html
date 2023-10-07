@@ -1,0 +1,299 @@
+﻿{% extends "base.html" %}
+{% block title %}
+<title>JM - Home</title>
+<meta name="keywords" content="WebSite Template" />
+<meta name="description" content="Porto - Multipurpose Website Template">
+<meta name="author" content="okler.net">
+
+{% endblock %}
+
+{% block content %}
+<div role="main" class="main">
+    {% load static %}
+    <section class="section bg-color-light-scale-2 position-relative border-0 m-0">
+        <div class="position-absolute top-0 left-0 w-50pct w-lg-auto d-none d-xl-block">
+            <img src="{% static 'paginaWebApp/img/slides/lady-erp-left.jpeg' %}" class="w-100 appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="1000" data-appear-animation-duration="1s" alt="">
+        </div>
+        <div class="position-absolute top-0 right-0 w-50pct w-lg-auto d-none d-xl-block">
+            <img src="{% static 'paginaWebApp/img/slides/lady-erp-right.jpeg' %}" class="w-100 appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="1000" data-appear-animation-duration="1s" alt="">
+        </div>
+        <div class="container py-5 my-5">
+            <div class="row justify-content-center py-3">
+                <div class="col-lg-7 text-center">
+                    <div class="d-flex flex-column align-items-center justify-content-center h-100">
+                        <h3 class="position-relative text-color-dark text-5 line-height-5 font-weight-semibold ls-0 px-4 mb-2 appear-animation" data-appear-animation="fadeInDownShorterPlus" data-plugin-options="{'minWindowWidth': 0}">
+                            <span class="position-absolute right-100pct top-50pct transform3dy-n50 opacity-7">
+                                <img src="{% static 'paginaWebApp/img/slides/slide-title-border-light.png' %}" class="w-auto appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="250" data-plugin-options="{'minWindowWidth': 0}" alt="" />
+                            </span>
+                            J&M ERP
+                            <span class="position-absolute left-100pct top-50pct transform3dy-n50 opacity-7">
+                                <img src="{% static 'paginaWebApp/img/slides/slide-title-border-light.png' %}" class="w-auto appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="250" data-plugin-options="{'minWindowWidth': 0}" alt="" />
+                            </span>
+                        </h3>
+                        <h1 class="text-color-dark font-weight-extra-bold text-10 text-md-12-13 line-height-1 mb-2 appear-animation" data-appear-animation="blurIn" data-appear-animation-delay="500" data-plugin-options="{'minWindowWidth': 0}">SOLUCIONES EN ERPs</h1>
+                        <p class="text-4-5 text-color-dark font-weight-light opacity-7 text-center mb-4" data-plugin-animated-letters data-plugin-options="{'startDelay': 1000, 'minWindowWidth': 0, 'animationSpeed': 30}">Tu distribuidor SAP, Microsoft, Aspel y Siigo</p>
+                        <a href="{% url 'contacto' %}" class="btn btn-primary btn-modern font-weight-bold text-2 py-3 btn-px-5 mt-2 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1800" data-plugin-options="{'minWindowWidth': 0}">Contactanos<i class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="home-intro home-intro-quaternary" id="home-intro">
+        <div class="container">
+
+            <div class="row text-center">
+                <div class="col">
+                    <p class="mb-0">
+                        <span class="highlighted-word highlighted-word-animation-1 highlighted-word-animation-1-light text-color-light font-weight-semibold text-5">Rápidos</span>
+                        en la atención y en el soporte
+                        <span>Tu aliado clave para el control de tu empresa.</span>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-7 pe-5 appear-animation" data-appear-animation="fadeInRightShorter">
+                <h2 class="font-weight-normal text-6 mb-4">Lo que <strong class="font-weight-extra-bold">somos</strong></h2>
+                <p class="lead pe-2 mb-4">Somos una empresa de Querétaro con más de 15 años de experiencia en la asesoría, implementación y soporte de sistemas de planificación de recursos empresariales (ERP) </p>
+                <p class="mb-4">Nos enfocamos en atender las necesidades de software para administrar empresas medianas (mediante soluciones SAP), empresas pequeñas (mediante soluciones Aspel) y micro-empresas (mediante soluciones Siigo).</p>
+                <a class="btn btn-light text-uppercase text-primary text-1 py-2 px-4 mb-1" href="{% url 'nosotros' %}"><strong>Conoce más</strong><i class="fas fa-chevron-right text-2 ps-2"></i></a>
+            </div>
+            <div class="col-lg-5">
+                <div class="row mt-5 mt-lg-0">
+                    <div class="col-md-8 col-lg-6 text-center text-lg-start mx-auto">
+                        <img class="img-fluid m-3 my-0 mt-lg-5 pt-lg-5 appear-animation" src="{% static 'paginaWebApp/img/office/about-us-greet-185.jpg' %}" alt="Office" data-appear-animation="expandIn" data-appear-animation-delay="200">
+                    </div>
+                    <div class="col-md-8 col-lg-6 ps-lg-0 text-center text-lg-start mx-auto">
+                        <img class="img-fluid m-3 appear-animation" src="{% static 'paginaWebApp/img/office/about-us-phone-185.jpg' %}" alt="Office" data-appear-animation="expandIn" data-appear-animation-delay="400">
+                        <img class="img-fluid m-3 appear-animation" src="{% static 'paginaWebApp/img/office/about-us-guy-185.jpg' %}" alt="Office" data-appear-animation="expandIn" data-appear-animation-delay="200">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="section bg-color-grey-scale-1 section-height-3 section-no-border appear-animation" data-appear-animation="fadeIn">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200">
+                    <h2 class="font-weight-normal text-6 mb-5">Nuestros <strong class="font-weight-extra-bold">servicios</strong></h2>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4 mb-4 appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="400">
+                    <div class="feature-box feature-box-secondary feature-box-style-4">
+                        <div class="feature-box-icon">
+                            <i class="fa-solid fa-person-chalkboard"></i>
+                        </div>
+                        <div class="feature-box-info">
+                            <h4 class="mb-2 font-weight-bold">Asesoramiento</h4>
+                            <p>Asesoría en la selección del mejor ERP para tu empresa, servidor en donde se alojará, número de licencias necesarias, entre otros.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4 appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="200">
+                    <div class="feature-box feature-box-secondary feature-box-style-4">
+                        <div class="feature-box-icon">
+                            <i class="fa-solid fa-box-open" style="color: #030e21;"></i>
+                        </div>
+                        <div class="feature-box-info">
+                            <h4 class="mb-2 font-weight-bold">Implementación</h4>
+                            <p>Parametrizamos tu ERP para que funcione de acuerdo con tus necesidades. Recopilamos e importamos las bases de datos para que utilices tus sistemas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4 appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="400">
+                    <div class="feature-box feature-box-secondary feature-box-style-4">
+                        <div class="feature-box-icon">
+                            <i class="fa-solid fa-user-graduate"></i>
+                        </div>
+                        <div class="feature-box-info">
+                            <h4 class="mb-2 font-weight-bold">Capacitación</h4>
+                            <p>Capacitamos a tu personal para el uso de tu sistema ERP. Reducimos tiempos y costos al orientar las capacitaciones conforme a las funciones que desempeñen.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-lg-3">
+                <div class="col-lg-4 mb-4 mb-lg-0 appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="400">
+                    <div class="feature-box feature-box-secondary feature-box-style-4">
+                        <div class="feature-box-icon">
+                            <i class="fa-solid fa-users-gear"></i>
+                        </div>
+                        <div class="feature-box-info">
+                            <h4 class="mb-2 font-weight-bold">Soporte</h4>
+                            <p>Servicios de soporte para atender dudas e incidencias en los sistemas ERP's.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4 mb-lg-0 appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="400">
+                    <div class="feature-box feature-box-secondary feature-box-style-4">
+                        <div class="feature-box-icon">
+                            <i class="fa-solid fa-square-poll-horizontal" style="color: #0d2244;"></i>
+                        </div>
+                        <div class="feature-box-info">
+                            <h4 class="mb-2 font-weight-bold">Análisis de datos</h4>
+                            <p>Creamos los reportes que necesitas para la toma de decisiones con información conectada a tu ERP.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4 mb-lg-0 appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="400">
+                    <div class="feature-box feature-box-secondary feature-box-style-4">
+                        <div class="feature-box-icon">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <div class="feature-box-info">
+                            <h4 class="mb-2 font-weight-bold">Desarrollos</h4>
+                            <p>Desarrollamos complementos para cubrir los GAPs de tu ERP.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="row my-5">
+            <div class="col my-3">
+
+                <div class="row text-center my-3">
+                    <div class="owl-carousel owl-theme carousel-center-active-item" data-plugin-options="{'responsive': {'0': {'items': 1}, '476': {'items': 1}, '768': {'items': 5}, '992': {'items': 7}, '1200': {'items': 7}}, 'autoplay': true, 'autoplayTimeout': 3000, 'dots': false}">
+                        <div>
+                            <img class="img-fluid" src="{% static 'paginaWebApp/img/logos/sap-business-one.png' %}" alt="">
+                        </div>
+                        <div>
+                            <img class="img-fluid" src="{% static 'paginaWebApp/img/logos/azure.png' %}" alt="">
+                        </div>
+                        <div>
+                            <img class="img-fluid" src="{% static 'paginaWebApp/img/logos/microsoft.png' %}" alt="">
+                        </div>
+                        <div>
+                            <img class="img-fluid" src="{% static 'paginaWebApp/img/logos/siigo-aspel.png' %}" alt="">
+                        </div>
+                        
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <section class="section bg-color-grey-scale-1 section-height-3 section-no-border section-center my-5 appear-animation" data-appear-animation="fadeIn">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200">
+                    <div class="owl-carousel owl-theme nav-bottom rounded-nav mb-0" data-plugin-options="{'items': 1, 'loop': false, 'autoHeight': true}">
+                        <div>
+                            <div class="col">
+                                <div class="testimonial testimonial-style-2 testimonial-with-quotes testimonial-quotes-dark mb-0">
+                                    <div class="testimonial-author">
+                                        <img src="{% static 'paginaWebApp/img/clients/calorycontrol.jpeg' %}" class="img-fluid rounded-circle" alt="">
+                                    </div>
+                                    <blockquote>
+                                        <p class="text-color-dark mb-0">Siempre hemos recibido un servicio rápido y muy amable. Agradezco su disponibilidad para ayudar, productividad para sumarse a nuestros esfuerzos de mejora, paciencia y sobre todo, el ser un equipo de profesionales en los que podemos confiar.</p>
+                                    </blockquote>
+                                    <div class="testimonial-author">
+                                        <p><strong class="opacity-9 font-weight-extra-bold text-2">Nora Casillas - CEO Calor y Control</strong></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="col">
+                                <div class="testimonial testimonial-style-2 testimonial-with-quotes testimonial-quotes-dark mb-0">
+                                    <div class="testimonial-author">
+                                        <img src="{% static 'paginaWebApp/img/clients/grupoAzero.png' %}" class="img-fluid rounded-circle" alt="">
+                                    </div>
+                                    <blockquote>
+                                        <p class="text-color-dark mb-0">Mi experiencia con ustedes desde el inicio ha sido completamente satisfactoria en todos los sentidos, siempre encontramos soluciones rápidas y eficientes cuando se presentan los problemas técnicos en la empresa y cada vez estamos más contentos al descubrir todos los servicios que nos pueden dar desde una llamada técnica hasta la elaboración de programas de soporte para nuestra operación.</p>
+                                    </blockquote>
+                                    <div class="testimonial-author">
+                                        <p><strong class="opacity-9 font-weight-extra-bold text-2">José Eduardo Prado - CEO Ferreteras Prado </strong></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="col">
+                                <div class="testimonial testimonial-style-2 testimonial-with-quotes testimonial-quotes-dark mb-0">
+                                    <div class="testimonial-author">
+                                        <img src="{% static 'paginaWebApp/img/clients/sedena.png' %}" class="img-fluid rounded-circle" alt="">
+                                    </div>
+                                    <blockquote>
+                                        <p class="text-color-dark mb-0">En cuanto a la experiencia, ha sido muy buena, favorable y eficaz. Las soluciones a las fayas han sido solucionadas de rápida acción.</p>
+                                    </blockquote>
+                                    <div class="testimonial-author">
+                                        <p><strong class="opacity-9 font-weight-extra-bold text-2">Hermelinda José Ramírez - Contaduría Secretaria de la Defensa Nacional - La Estancia </strong></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container">
+        <div class="row mt-4">
+            <div class="col-lg-12 text-center appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="400">
+                <h2 class="font-weight-normal text-6 mt-3 mb-5">Nuestro material <strong class="font-weight-extra-bold">pensado para ti</strong></h2>
+            </div>
+        </div>
+        <div class="row recent-posts pb-4 mb-5 appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="200">
+           {% for i in recomended %}
+            <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+                <article>
+                    <div class="row">
+                        <div class="col-auto pe-0">
+                            <div class="date">
+                                <span class="day text-color-dark font-weight-extra-bold">{{i.date_created.day}}</span>
+                                <span class="month bg-color-primary font-weight-semibold text-color-light text-1">
+                                    {% if i.date_created.month == 1 %}
+									    Enero
+                                    {% elif i.date_created.month == 2 %}
+                                        Febrero
+                                    {% elif i.date_created.month == 3 %}
+                                        Marzo
+                                    {% elif i.date_created.month == 4 %}
+                                        Abril
+                                    {% elif i.date_created.month == 5 %}
+                                        Mayo
+                                    {% elif i.date_created.month == 6 %}
+                                        Junio
+                                    {% elif i.date_created.month == 7 %}
+                                        Julio
+                                    {% elif i.date_created.month == 8 %}
+                                        Agosto
+                                    {% elif i.date_created.month == 9 %}
+                                        Septiembre
+                                    {% elif i.date_created.month == 10 %}
+                                        Octubre
+                                    {% elif i.date_created.month == 11 %}
+                                        Noviembre
+                                    {% else %}
+                                        Diciembre
+                                    {% endif %}
+
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col ps-1">
+                            <h4 class="line-height-3 text-4"><a href="{% url 'blogPost' i.id %}" class="text-dark">{{i.title}}</a></h4>
+                            <p class="line-height-5 pe-3 mb-1">{{i.subtitle}}</p>
+                            <a class="btn btn-light text-uppercase text-primary text-1 py-2 px-3 mb-1 mt-2" href="{% url 'blogPost' i.id %}"><strong>Conoce más</strong><i class="fas fa-chevron-right text-2 ps-2"></i></a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            {% endfor %}
+        </div>
+    </div>
+    <hr>
+
+</div>
+{% endblock %}

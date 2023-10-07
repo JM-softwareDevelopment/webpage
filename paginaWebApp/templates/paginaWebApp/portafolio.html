@@ -1,0 +1,118 @@
+﻿{% extends "base.html" %}
+{% block title %}
+<title>JM - Portafolio</title>
+<meta name="keywords" content="WebSite Template" />
+<meta name="description" content="Porto - Multipurpose Website Template">
+<meta name="author" content="okler.net">
+
+{% endblock %}
+
+{% block content %}
+{% load static %}
+<div role="main" class="main">
+
+    <section class="page-header page-header-modern bg-color-light-scale-1 page-header-md ">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+
+                <div class="col">
+                    <div class="row">
+                        <div class="col-md-12 align-self-center p-static order-2 text-center">
+                            <div class="overflow-hidden pb-2">
+                                <h1 class="text-dark font-weight-bold text-9 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="100">Portafolio</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <div class="container py-2">
+
+        <ul class="nav nav-pills sort-source sort-source-style-3 justify-content-center" data-sort-id="portfolio" data-option-key="filter" data-plugin-options="{'layoutMode': 'fitRows', 'filter': '*'}">
+            <li class="nav-item active" data-option-value="*"><a class="nav-link text-2-5 text-uppercase active" href="#">Todos</a></li>
+            <li class="nav-item" data-option-value=".erp"><a class="nav-link text-2-5 text-uppercase" href="#">Implementaciones ERP</a></li>
+            <li class="nav-item" data-option-value=".servidores"><a class="nav-link text-2-5 text-uppercase" href="#">Implementaciones Servidores</a></li>
+            <li class="nav-item" data-option-value=".soporte"><a class="nav-link text-2-5 text-uppercase" href="#">Soporte</a></li>
+            <li class="nav-item" data-option-value=".analisis"><a class="nav-link text-2-5 text-uppercase" href="#">Análisis de Datos</a></li>
+        </ul>
+
+        <div class="sort-destination-loader sort-destination-loader-showing mt-4 pt-2 pb-3 mb-3">
+            <div class="row portfolio-list sort-destination popup-gallery-ajax" data-sort-id="portfolio">
+
+                <!– Para definir en qué agrupacion pertenece una publicacion en el portafolio basta con: en el primer div colocar la sección después de: col-sm-6 col-lg-3 isotope-item. Las opciones posibles se encuentran en la seccion data-option-value del ul de arriba  –>
+
+                <div class="col-sm-6 col-lg-3 isotope-item analisis">
+                    <div class="portfolio-item">
+                        <a href="{% url 'control-vendedores' %}" data-ajax-on-modal>
+                            <span class="thumb-info thumb-info-lighten border-radius-0">
+                                <span class="thumb-info-wrapper border-radius-0">
+                                    <img src="{% static 'paginaWebApp/img/projects/vendedores/vendorsheader.png' %}" class="img-fluid border-radius-0" alt="">
+                                    <span class="thumb-info-title">
+                                        <span class="thumb-info-inner">PROGRAMA DE VISITAS AL CLIENTE</span>
+                                        <span class="thumb-info-type">Desarrollo de APP y análisis de datos</span>
+                                    </span>
+                                    <span class="thumb-info-action">
+                                        <span class="thumb-info-action-icon bg-dark opacity-8"><i class="fas fa-plus"></i></span>
+                                    </span>
+                                </span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-3 isotope-item analisis">
+                    <div class="portfolio-item">
+                        <a href="{% url 'tesoreria' %}"  data-ajax-on-modal>
+                            <span class="thumb-info thumb-info-lighten border-radius-0">
+                                <span class="thumb-info-wrapper border-radius-0">
+                                    <img src="{% static 'paginaWebApp/img/projects/tesoreria/tesoreriaHeader.png' %}" class="img-fluid border-radius-0" alt="">
+                                    <span class="thumb-info-title">
+                                        <span class="thumb-info-inner">ANÁLISIS DE CUENTAS POR COBRAR</span>
+                                        <span class="thumb-info-type">Análisis de Datos</span>
+                                    </span>
+                                    <span class="thumb-info-action">
+                                        <span class="thumb-info-action-icon bg-dark opacity-8"><i class="fas fa-plus"></i></span>
+                                    </span>
+                                </span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-3 isotope-item analisis">
+                    <div class="portfolio-item">
+                        <a href="{% url 'tickets' %}" data-ajax-on-modal>
+                            <span class="thumb-info thumb-info-lighten border-radius-0">
+                                <span class="thumb-info-wrapper border-radius-0">
+                                    <img src="{% static 'paginaWebApp/img/projects/tickets/ticketsheader.png' %}" class="img-fluid border-radius-0" alt="">
+                                    <span class="thumb-info-title">
+                                        <span class="thumb-info-inner">MEDICIÓN DE TIEMPOS DE RESPUESTA (SLA's)</span>
+                                        <span class="thumb-info-type">Análisis de Datos</span>
+                                    </span>
+                                    <span class="thumb-info-action">
+                                        <span class="thumb-info-action-icon bg-dark opacity-8"><i class="fas fa-plus"></i></span>
+                                    </span>
+                                </span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+{% endblock %}
+
+
+{% block extrajs %}
+<script src="{% static 'paginaWebApp/js/examples/examples.portfolio.js' %}"></script>
+{% endblock extrajs %}

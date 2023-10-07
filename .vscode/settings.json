@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/028250e2-82b5-472a-8645-0c4eba1352d0/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/jmintercopy-webpage",
+    "appService.deploySubpath": "."
+}

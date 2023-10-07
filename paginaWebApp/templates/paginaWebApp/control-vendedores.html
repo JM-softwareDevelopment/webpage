@@ -1,0 +1,86 @@
+{% load static %}
+<div class="ajax-container">
+	<div class="row align-items-center py-4">
+
+		<div class="col">
+			<a href="#" data-ajax-portfolio-prev class="text-decoration-none d-block float-start">
+				<div class="d-flex align-items-center line-height-1">
+					<i class="fas fa-arrow-left text-dark text-4 me-3"></i>
+					<div class="d-none d-sm-block line-height-1">
+						<span class="text-dark opacity-4 text-1">Proyecto Previo</span>
+					</div>
+				</div>
+			</a>
+		</div>
+		<div class="col">
+			<div class="row">
+				<div class="col-md-12 align-self-center p-static order-2 text-center">
+					<div class="overflow-hidden pb-2">
+						<h2 class="text-dark font-weight-bold text-7 mb-0">PROGRAMA DE VISITAS AL CLIENTE</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col">
+			<a href="#" data-ajax-portfolio-next class="text-decoration-none d-block float-end">
+				<div class="d-flex align-items-center text-end line-height-1">
+					<div class="d-none d-sm-block line-height-1">
+						<span class="text-dark opacity-4 text-1">Proyecto siguiente</span>
+					</div>
+					<i class="fas fa-arrow-right text-dark text-4 ms-3"></i>
+				</div>
+			</a>
+		</div>
+
+	</div>
+
+	<div class="row pb-4 mb-2">
+		<div class="col-sm-6">
+
+			<div class="owl-carousel owl-theme nav-inside nav-inside-edge nav-squared nav-with-transparency nav-dark mt-3" data-plugin-options="{'items': 1, 'margin': 10, 'loop': false, 'nav': true, 'dots': false}">
+				<div>
+					<div class="img-thumbnail border-0 border-radius-0 p-0 d-block">
+						<img src="{% static 'paginaWebApp/img/projects/vendedores/power1.png' %}" class="img-fluid border-radius-0" alt="">
+					</div>
+				</div>
+				<div>
+					<div class="img-thumbnail border-0 border-radius-0 p-0 d-block">
+						<img src="{% static 'paginaWebApp/img/projects/vendedores/app.png' %}" class="img-fluid border-radius-0" alt="">
+					</div>
+				</div>
+			</div>
+
+			<hr class="solid my-5">
+
+			<strong class="text-uppercase text-1 me-3 text-dark float-start position-relative top-2">Compartir</strong>
+			<ul class="social-icons">
+				<li class="social-icons-facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+				<li class="social-icons-twitter"><a href="http://www.twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+				<li class="social-icons-linkedin"><a href="http://www.linkedin.com/" target="_blank" title="Linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+			</ul>
+
+		</div>
+		<div class="col-sm-6">
+			<h2 class="text-color-dark font-weight-normal text-4 mb-0">DESCRIPCIÓN DE <strong class="font-weight-extra-bold">PROYECTO</strong></h2>
+			<h4>1. Fase de pregunta</h4>
+			<p>Este proyecto se implementó en una ferretería. El objetivo principal era promover las ventas a través de un programa de visitas a clientes. Visitar a los clientes en sus instalaciones permitiría detectar necesidades y finalmente obtener órdenes de compra.</p>
+			<h4>2. Prepárese para la fase de exploración de datos</h4>
+			<p>Primero, se necesitó implementar nuevos perfiles y folios en su ERP para dividir los documentos de ventas que son producto de este programa. Posteriormente se creó una aplicación para Android que comprueba si el vendedor realmente está visitando a los clientes. Lo anterior a través de su ubicación (ver imagen anexa).</p>
+			<h4>3. Fase del proceso</h4>
+			<p>Una vez que nos aseguramos de tener todos los datos que necesitamos para nuestro análisis y tenemos datos confiables y útiles, fue el momento de procesarlos. Primero, utilizamos Python y SQL para recuperar toda la información de ventas útil para el proyecto. En esta etapa filtramos documentos cancelados, consideramos impuestos y devoluciones, y corregimos errores de datos y tipos de datos.</p>
+			<h4>4. Fase de análisis</h4>
+			<p>Con la ayuda del director definimos cuántas visitas eran adecuadas para cada cliente, cuántas órdenes de compra deben obtener los proveedores y en qué plazo deben lograrlo.</p>
+			<h4>5. Fase de compartir</h4>
+			<p>Por último, los datos descritos y otros criterios se resumieron y representaron de forma amigable en un archivo Power Bi. En este informe podemos ver a través de una simple columna Verdadero/False, si el proveedor cumple con todas las metas establecidas para cada cliente. Esta información se visualiza en tiempo real. Puedes ver capturas de los programas generados en la sección de imagenes. Los datos mostrados fueron modificados por motivos de privacidad.</p>
+			<h4>6. Fase de acción</h4>
+			<p>La fase de acción fue realizada por el director, quien determinó reasignar los clientes a otros vendedores si no se alcanzan los objetivos. Arriba puede ver una página de este informe que ha sido modificada por motivos de privacidad.</p>
+
+			<h2 class="text-color-dark font-weight-normal text-4 mb-0 mt-4">Detalles del <strong class="font-weight-extra-bold">Proyecto</strong></h2>
+			<ul class="list list-icons list-primary list-borders text-2">
+				<li><i class="fas fa-caret-right left-10"></i> <strong class="text-color-primary">Cliente:</strong> Ferreteras Prado</li>
+				<li><i class="fas fa-caret-right left-10"></i> <strong class="text-color-primary">Fecha:</strong> 2022</li>
+				<li><i class="fas fa-caret-right left-10"></i> <strong class="text-color-primary">Skills:</strong> <a href="#" class="badge badge-dark badge-sm rounded-pill px-2 py-1 ms-1">Diseño</a><a href="#" class="badge badge-dark badge-sm rounded-pill px-2 py-1 ms-1">Android</a><a href="#" class="badge badge-dark badge-sm rounded-pill px-2 py-1 ms-1">Base de datos</a><a href="#" class="badge badge-dark badge-sm rounded-pill px-2 py-1 ms-1">Power Bi</a><a href="#" class="badge badge-dark badge-sm rounded-pill px-2 py-1 ms-1">SAE</a></li>
+			</ul>
+		</div>
+	</div>
+</div>

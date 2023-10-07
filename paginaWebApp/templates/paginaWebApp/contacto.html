@@ -1,0 +1,163 @@
+﻿{% extends "base.html" %}
+{% load static %}
+{% block title %}
+<title>JM - Contacto</title>
+<meta name="keywords" content="WebSite Template" />
+<meta name="description" content="Porto - Multipurpose Website Template">
+<meta name="author" content="okler.net">
+
+{% endblock %}
+
+{% block content %}
+
+<div role="main" class="main">
+
+    <!-- Google Maps - Go to the bottom of the page to change settings and map location. -->
+    <div id="googlemaps" class="google-map mt-0" style="height: 500px;"></div>
+
+    <div class="container">
+
+        <div class="row py-4">
+            <div class="col-lg-6">
+
+                <h2 class="font-weight-bold text-8 mt-2 mb-0">Contáctanos</h2>
+                <p class="mb-4">Acercate a nosotros. Responderemos tus dudas relacionadas a ERP's</p>
+
+                <form class="contact-form" action="{% static 'paginaWebApp/php/contact-form.php' %}" method="POST">
+                    <div class="contact-form-success alert alert-success d-none mt-4">
+                        <strong>Correo enviado!</strong> En las próximas 24 horas nos pondremos en contacto contigo.
+                    </div>
+
+                    <div class="contact-form-error alert alert-danger d-none mt-4">
+                        <strong>Error</strong> Se encontró un error al enviar tu mensaje.
+                        <span class="mail-error-message text-1 d-block"></span>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group col-lg-6">
+                            <label class="form-label mb-1 text-2">Nombre completo</label>
+                            <input type="text" value="" data-msg-required="Please enter your name." maxlength="100" class="form-control text-3 h-auto py-2" name="name" required>
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <label class="form-label mb-1 text-2">Correo de contacto</label>
+                            <input type="email" value="" data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address." maxlength="100" class="form-control text-3 h-auto py-2" name="email" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col">
+                            <label class="form-label mb-1 text-2">Título</label>
+                            <input type="text" value="" data-msg-required="Please enter the subject." maxlength="100" class="form-control text-3 h-auto py-2" name="subject" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col">
+                            <label class="form-label mb-1 text-2">Mensaje</label>
+                            <textarea maxlength="5000" data-msg-required="Please enter your message." rows="8" class="form-control text-3 h-auto py-2" name="message" required></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col">
+                            <input type="submit" value="Enviar" class="btn btn-primary btn-modern" data-loading-text="Cargando...">
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+            <div class="col-lg-6">
+
+                <div class="appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="800">
+                    <h4 class="mt-2 mb-1">Sucursal <strong>Querétaro</strong></h4>
+                    <ul class="list list-icons list-icons-style-2 mt-2">
+                        <li><i class="fas fa-map-marker-alt top-6"></i> <strong class="text-dark">Dirección:</strong> Armando Birlain Shaffler 2001 Torre Corporativo I, piso 6B, Centro Sur, 76090, Santiago de Querétaro, Querétaro.</li>
+                        <li><i class="fas fa-phone top-6"></i> <strong class="text-dark">Teléfono:</strong> 442-360-2500</li>
+                        <li><i class="fas fa-envelope top-6"></i> <strong class="text-dark">Email:</strong> <a href="mailto:ventas@jmintercopy.com.mx">ventas@jmintercopy.com.mx</a></li>
+                    </ul>
+                </div>
+                <div class="appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="800">
+                    <h4 class="mt-2 mb-1">Sucursal <strong>San Juan del Río</strong></h4>
+                    <ul class="list list-icons list-icons-style-2 mt-2">
+                        <li><i class="fas fa-map-marker-alt top-6"></i> <strong class="text-dark">Dirección:</strong> Lomas de San Juan 94, Lomas de San Juan, 76806, San Juan del Río, Querétaro.</li>
+                        <li><i class="fas fa-phone top-6"></i> <strong class="text-dark">Teléfono:</strong> 427-152-0228</li>
+                        <li><i class="fas fa-envelope top-6"></i> <strong class="text-dark">Email:</strong> <a href="mailto:ventas@jmintercopy.com.mx">ventas@jmintercopy.com.mx</a></li>
+                    </ul>
+                </div>
+
+                <div class="appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="950">
+                    <h4 class="pt-5">Horario de <strong>atención</strong></h4>
+                    <ul class="list list-icons list-dark mt-2">
+                        <li><i class="far fa-clock top-6"></i> Lunes - Viernes - 8am a 6pm</li>
+                        <li><i class="far fa-clock top-6"></i> Sábados - Domingos - Cerrado</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+{% endblock %}
+{% block extrajs %}
+    <script src="{% static 'paginaWebApp/vendor/jquery.validation/jquery.validate.min.js' %}"></script>
+    <script src="{% static 'paginaWebApp/js/views/view.contact.js' %}"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_iFAoYHxYF7hTchl4XSjVPxTQy488ISM"></script>
+		<script>
+
+			/*
+			Map Settings
+
+				Find the Latitude and Longitude of your address:
+					- https://www.latlong.net/
+					- http://www.findlatitudeandlongitude.com/find-address-from-latitude-and-longitude/
+
+			*/
+			function initializeGoogleMaps() {
+				// Map Markers
+				var mapMarkers = [{
+					address: "Armando Birlain Shaffler 2001 Torre Corporativo I, piso 6B, Centro Sur, 76090, Santiago de Querétaro, Querétaro",
+					html: "<strong>Armando Birlain Shaffler 2001 Torre Corporativo I, piso 6B, Centro Sur, 76090</strong><br>Santiago de Querétaro, Querétaro",
+					icon: {
+						image: "img/pin.png",
+						iconsize: [26, 46],
+						iconanchor: [12, 46]
+					},
+					popup: true
+				}];
+
+				// Map Initial Location
+				var initLatitude = 20.573307400544635;
+				var initLongitude = -100.36194020526172;
+                
+
+				// Map Extended Settings
+				var mapSettings = {
+					controls: {
+						draggable: (($.browser.mobile) ? false : true),
+						panControl: true,
+						zoomControl: true,
+						mapTypeControl: true,
+						scaleControl: true,
+						streetViewControl: true,
+						overviewMapControl: true
+					},
+					scrollwheel: false,
+					markers: mapMarkers,
+					latitude: initLatitude,
+					longitude: initLongitude,
+					zoom: 11
+				};
+
+				var map = $('#googlemaps').gMap(mapSettings);
+			}
+
+			// Initialize Google Maps when element enter on browser view
+			theme.fn.intObs( '.google-map', 'initializeGoogleMaps()', {} );
+
+			// Map text-center At
+			var mapCenterAt = function(options, e) {
+				e.preventDefault();
+				$('#googlemaps').gMap("centerAt", options);
+			}
+
+		</script>
+{% endblock extrajs %}

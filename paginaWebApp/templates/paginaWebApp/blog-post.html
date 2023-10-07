@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+<title>JM - Blog</title>
+<meta name="keywords" content="WebSite Template" />
+<meta name="description" content="Porto - Multipurpose Website Template">
+<meta name="author" content="okler.net">
+{% endblock %}
+
+{% block content %}
+<div role="main" class="main">
+
+	<section class="page-header page-header-modern bg-color-light-scale-1 page-header-md">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 align-self-center p-static order-2 text-center">
+					<h1 class="text-dark font-weight-bold text-8">BLOG</h1>
+					<span class="sub-title text-dark">Infórmate con nosotros. Tú aliado clave en ERP's</span>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="container py-4">
+
+		<div class="row">
+			<div class="col">
+				<div class="blog-posts single-post">
+
+					<article class="post post-large blog-single-post border-0 m-0 p-0">
+						<div class="post-image ms-0">
+							<a href="blog-post.html">
+								<img src="{{result.imagen.url}}" class="img-fluid img-thumbnail img-thumbnail-no-borders rounded-0" alt="" />
+							</a>
+						</div>
+						
+
+						<div class="post-date ms-0">
+							<span class="day">{{result.date_created.day}}</span>
+							<span class="month">
+								{% if result.date_created.month == 1 %}
+									Enero
+								{% elif result.date_created.month == 2 %}
+									Febrero
+								{% elif result.date_created.month == 3 %}
+									Marzo
+								{% elif result.date_created.month == 4 %}
+									Abril
+								{% elif result.date_created.month == 5 %}
+									Mayo
+								{% elif result.date_created.month == 6 %}
+									Junio
+								{% elif result.date_created.month == 7 %}
+									Julio
+								{% elif result.date_created.month == 8 %}
+									Agosto
+								{% elif result.date_created.month == 9 %}
+									Septiembre
+								{% elif result.date_created.month == 10 %}
+									Octubre
+								{% elif result.date_created.month == 11 %}
+									Noviembre
+								{% else %}
+									Diciembre
+								{% endif %}
+							</span>
+						</div>
+
+						<br>
+						<div class="post-content ms-0">
+
+							<h2 class="font-weight-semi-bold"><a href="blog-post.html">{{result.title}}</a></h2>
+							{{result.body|linebreaks}}
+						</div>
+					</article>
+
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+</div>
+
+{% endblock %}
+
+
+

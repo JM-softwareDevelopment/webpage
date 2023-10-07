@@ -1,0 +1,103 @@
+{% load static %}
+<div class="ajax-container">
+	<div class="row align-items-center py-4">
+
+		<div class="col">
+			<a href="#" data-ajax-portfolio-prev class="text-decoration-none d-block float-start">
+				<div class="d-flex align-items-center line-height-1">
+					<i class="fas fa-arrow-left text-dark text-4 me-3"></i>
+					<div class="d-none d-sm-block line-height-1">
+						<span class="text-dark opacity-4 text-1">Proyecto Previo</span>
+					</div>
+				</div>
+			</a>
+		</div>
+		<div class="col">
+			<div class="row">
+				<div class="col-md-12 align-self-center p-static order-2 text-center">
+					<div class="overflow-hidden pb-2">
+						<h2 class="text-dark font-weight-bold text-7 mb-0">ANÁLISIS DE CUENTAS POR COBRAR</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col">
+			<a href="#" data-ajax-portfolio-next class="text-decoration-none d-block float-end">
+				<div class="d-flex align-items-center text-end line-height-1">
+					<div class="d-none d-sm-block line-height-1">
+						<span class="text-dark opacity-4 text-1">Proyecto siguiente</span>
+					</div>
+					<i class="fas fa-arrow-right text-dark text-4 ms-3"></i>
+				</div>
+			</a>
+		</div>
+
+	</div>
+
+	<div class="row pb-4 mb-2">
+		<div class="col-sm-6">
+
+			<div class="owl-carousel owl-theme nav-inside nav-inside-edge nav-squared nav-with-transparency nav-dark mt-3" data-plugin-options="{'items': 1, 'margin': 10, 'loop': false, 'nav': true, 'dots': false}">
+				<div>
+					<div class="img-thumbnail border-0 border-radius-0 p-0 d-block">
+						<img src="{% static 'paginaWebApp/img/projects/tesoreria/power1.png' %}" class="img-fluid border-radius-0" alt="">
+					</div>
+				</div>
+				<div>
+					<div class="img-thumbnail border-0 border-radius-0 p-0 d-block">
+						<img src="{% static 'paginaWebApp/img/projects/tesoreria/power2.png' %}" class="img-fluid border-radius-0" alt="">
+					</div>
+				</div>
+			</div>
+
+			<hr class="solid my-5">
+
+			<strong class="text-uppercase text-1 me-3 text-dark float-start position-relative top-2">Compartir</strong>
+			<ul class="social-icons">
+				<li class="social-icons-facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+				<li class="social-icons-twitter"><a href="http://www.twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+				<li class="social-icons-linkedin"><a href="http://www.linkedin.com/" target="_blank" title="Linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+			</ul>
+
+		</div>
+		<div class="col-sm-6">
+			<h2 class="text-color-dark font-weight-normal text-4 mb-0">DESCRIPCIÓN DE <strong class="font-weight-extra-bold">PROYECTO</strong></h2>
+			<h4>1. Fase de pregunta</h4>
+			<p>Se detectó una necesidad del cliente de medir el comportamiento de sus cuentas por cobrar. El principal problema era identificar todos los ingresos que se recibirían en diferentes intervalos de tiempo. Con una mayor investigación detectamos que no contaban con métricas para evaluar el área de tesorería. Se desconocían temas importantes como los siguientes: cuánto cuesta invertir en otorgar créditos a clientes, cuánto tardan en pagar, cuántas veces en el año se han renovado las cuentas por cobrar y qué porcentaje de cuentas por cobrar se han recolectado. El objetivo de este proyecto era responder a todas estas preguntas con un informe sencillo.</p>
+			<h4>2. Prepárese para la fase de exploración de datos</h4>
+			<p>Para lograr el objetivo, se recolectó toda la información pertinente sobre los movimientos de las cuentas por cobrar en su sistema ERP. Para este proyecto se recolectó la siguiente información:</p>
+			<ul>
+				<li>Importe total con y sin impuestos.</li>
+				<li>Período de crédito de los documentos de venta.</li>
+				<li>Fechas en que se produjeron las ventas y los pagos.</li>
+				<li>Clientes involucrados en cada movimiento.</li>
+			</ul>
+			<p>El principal desafío en esta etapa es identificar la base de datos, tablas y campo que guardan la información que necesitamos para cumplir nuestros objetivos.</p>
+			<h4>3. Fase de procesamiento</h4>
+			<p>Usando SQL y Python se transformaron los datos para ordenarlos de una manera  más significativa para nosotros. Las manipulaciones incluyeron:</p>
+			<ul>
+				<li>Dinamización de datos.</li>
+				<li>Uniones.</li>
+				<li>Concatenación.</li>
+				<li>Agrupación de datos.</li>
+				<li>Restas, sumas y multiplicaciones.</li>
+			</ul>
+			<p>Estas actividades tuvieron como finalidad obtener indicadores como:</p>
+			<ul>
+				<li>Días de ventas pendientes.</li>
+				<li>Promedio de días en mora.</li>
+				<li>Índice de rotación de cuentas por cobrar.</li>
+				<li>Índice de efectividad de cobranza.</li>
+			</ul>
+			<h4>4. Fase de análisis</h4>
+			<p>En este proyecto el cliente no requirió que JM se involucrará en el proceso de análisis de información. No obstante, se nos solicitó contribuir en la creación de un reporte para la representación de la información de forma amigable. Con ayuda de las herramientas de SQL, Python y Power Bi se creó el reporte que se visualiza en la sección de imágenes. Los datos mostrados fueron modificados por motivos de privacidad.</p>
+			
+			<h2 class="text-color-dark font-weight-normal text-4 mb-0 mt-4">Detalles del <strong class="font-weight-extra-bold">Proyecto</strong></h2>
+			<ul class="list list-icons list-primary list-borders text-2">
+				<li><i class="fas fa-caret-right left-10"></i> <strong class="text-color-primary">Cliente:</strong> Calor y Control</li>
+				<li><i class="fas fa-caret-right left-10"></i> <strong class="text-color-primary">Fecha:</strong> 2021</li>
+				<li><i class="fas fa-caret-right left-10"></i> <strong class="text-color-primary">Skills:</strong> <a href="#" class="badge badge-dark badge-sm rounded-pill px-2 py-1 ms-1">Base de datos</a><a href="#" class="badge badge-dark badge-sm rounded-pill px-2 py-1 ms-1">Power Bi</a><a href="#" class="badge badge-dark badge-sm rounded-pill px-2 py-1 ms-1">SAE</a></li>
+			</ul>
+		</div>
+	</div>
+</div>

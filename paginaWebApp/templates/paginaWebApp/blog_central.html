@@ -1,0 +1,190 @@
+﻿{% extends "base.html" %}
+{% block title %}
+<title>JM - Blog</title>
+<meta name="keywords" content="WebSite Template" />
+<meta name="description" content="Porto - Multipurpose Website Template">
+<meta name="author" content="okler.net">
+
+{% endblock %}
+
+{% block content %}
+{% load static %}
+<div role="main" class="main">
+
+    <section class="page-header page-header-modern bg-color-light-scale-1 page-header-md">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 align-self-center p-static order-2 text-center">
+                    <h1 class="text-dark font-weight-bold text-8">¡Tenemos material importante pensado para ti!</h1>
+                    <span class="sub-title text-dark">Revisa nuestros blogs aquí</span>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <div class="container py-4">
+
+        <div class="row">
+            <div class="col-lg-3">
+                <aside class="sidebar">
+                    <form action="{% url 'searched' %}" method="POST">
+                        {% csrf_token %}                     
+                        <div class="input-group mb-3 pb-1">
+                            
+                            <input class="form-control text-1" placeholder="Buscar..." name="searchInput"  type="text">
+                            <button type="submit" class="btn btn-dark text-1 p-2"><i class="fas fa-search m-2"></i></button>
+                        </div>
+                    </form>
+                    <br>
+                    <div class="tabs tabs-dark mb-4 pb-2">
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item"><a class="nav-link show active text-1 font-weight-bold text-uppercase" href="#popularPosts" data-bs-toggle="tab">Popular</a></li>
+                            <li class="nav-item"><a class="nav-link text-1 font-weight-bold text-uppercase" href="#recentPosts" data-bs-toggle="tab">Recomendado</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="popularPosts">
+                                <ul class="simple-post-list">
+                                    {% for i in popular %}
+                                    <li>
+                                        <div class="post-image">
+                                            <div class="img-thumbnail img-thumbnail-no-borders d-block">
+                                                <a href="{% url 'blogPost' i.id %}">
+                                                    <img src="{{i.imagen.url}}" width="50" height="50" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="post-info">
+                                            <a href="{% url 'blogPost' i.id %}">{{i.title}}</a>
+                                            <div class="post-meta">
+                                                {{i.date_created.date}}
+                                            </div>
+                                        </div>
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                            <div class="tab-pane" id="recentPosts">
+                                <ul class="simple-post-list">
+                                    {% for i in recomended %}
+                                    <li>
+                                        <div class="post-image">
+                                            <div class="img-thumbnail img-thumbnail-no-borders d-block">
+                                                <a href="{% url 'blogPost' i.id %}">
+                                                    <img src="{{i.imagen.url}}" width="50" height="50" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="post-info">
+                                            <a href="{% url 'blogPost' i.id %}">{{i.title}}</a>
+                                            <div class="post-meta">
+                                                {{i.date_created.date}}
+                                            </div>
+                                        </div>
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <h5 class="font-weight-semi-bold pt-4">Acerca de nosotros</h5>
+                    <p>Somos una empresa de Querétaro con más de 15 años de experiencia en la asesoría, implementación y soporte de sistemas de planificación de recursos empresariales (ERP) para PYME's </p>
+                </aside>
+            </div>
+            <div class="col-lg-6">
+                <div class="blog-posts">
+                    {% for i in pageInfo %}
+                    <article class="post post-large">
+                        <div class="post-image">
+                            <a href="{% url 'blogPost' i.id %}">
+                                <img src="{{i.imagen.url}}" class="img-fluid img-thumbnail img-thumbnail-no-borders rounded-0" alt="" />
+                            </a>
+                        </div>
+
+                        <div class="post-date">
+                            <span class="day">{{i.date_created.day}}</span>
+                            <span class="month">
+                                {% if i.date_created.month == 1 %}
+                                    Enero
+                                {% elif i.date_created.month == 2 %}
+                                    Febrero
+                                {% elif i.date_created.month == 3 %}
+                                    Marzo
+                                {% elif i.date_created.month == 4 %}
+                                    Abril
+                                {% elif i.date_created.month == 5 %}
+                                    Mayo
+                                {% elif i.date_created.month == 6 %}
+                                    Junio
+                                {% elif i.date_created.month == 7 %}
+                                    Julio
+                                {% elif i.date_created.month == 8 %}
+                                    Agosto
+                                {% elif i.date_created.month == 9 %}
+                                    Septiembre
+                                {% elif i.date_created.month == 10 %}
+                                    Octubre
+                                {% elif i.date_created.month == 11 %}
+                                    Noviembre
+                                {% else %}
+                                    Diciembre
+                                {% endif %}
+                            </span>
+                        </div>
+
+                        <div class="post-content">
+
+                            <h2 class="font-weight-semibold text-6 line-height-3 mb-3"><a href="{% url 'blogPost' i.id %}"> {{i.title}} </a></h2>
+                            
+                            <p> {{i.subtitle}}</p>
+                           
+
+                            <div class="post-meta">
+                                <span><i class="far fa-folder"></i> <a href="{% url 'blogCentralCategoria' i.category %}">{{i.category}}</a></span>
+                                <span class="d-block d-sm-inline-block float-sm-end mt-3 mt-sm-0"><a href="{% url 'blogPost' i.id %}" class="btn btn-xs btn-light text-1 text-uppercase">Leer artículo</a></span>
+                            </div>
+
+                        </div>
+                    </article>
+                    {% endfor %}
+                   
+
+                    <ul class="pagination float-end">
+                        <li class="page-item"><a class="page-link" href="?page=1"><i class="fas fa-angle-left"></i></a></li>          
+                        {% for i in iterator %}
+                            {% if i == pageInfo.number %}
+                                <li class="page-item active"><a class="page-link" href="?page={{i}}">{{i}}</a></li>
+                            {% else %}
+                                <li class="page-item"><a class="page-link" href="?page={{i}}">{{i}}</a></li>
+
+                            {% endif %}
+                        {% endfor %}
+                        <li class="page-item"><a class="page-link" href="?page={{pageInfo.paginator.num_pages}}"><i class="fas fa-angle-right"></i></a></li>
+                    </ul>
+
+
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <aside class="sidebar pb-4">
+                    <h5 class="font-weight-semi-bold pt-4 mb-2">Categorias</h5>
+                    <div class="mb-3 pb-1">
+                        <a href="{% url 'blogCentral' %}"><span class="badge badge-dark badge-sm rounded-pill text-uppercase px-2 py-1 me-1">Todas</span></a>
+                        {% for i in categoriesFooter %}
+                        <a href="{% url 'blogCentralCategoria' i.category %}"><span class="badge badge-dark badge-sm rounded-pill text-uppercase px-2 py-1 me-1">{{i.category}}</span></a>
+                        {% endfor %}
+                    </div>
+                    <a href="http://themeforest.net/item/porto-responsive-html5-template/4106987" target="_blank" class="my-4 pt-3 d-block">
+                        <img alt="Porto" class="img-fluid" src="{% static 'paginaWebApp/img/blog/blog-ad.png' %}" />
+                    </a>
+                    <h5 class="font-weight-semi-bold pt-4">Encuentranos en Facebook</h5>
+                    <div class="fb-page" data-href="https://www.facebook.com/jm.intercopy.7" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/jm.intercopy.7" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/jm.intercopy.7">J&M ERP's</a></blockquote></div>
+                </aside>
+            </div>
+        </div>
+
+    </div>
+    <br>
+</div>
+
+{% endblock %}
